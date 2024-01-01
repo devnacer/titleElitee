@@ -1,0 +1,142 @@
+@import "variables";
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  background-image: url(bg.PNG);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  padding-top: 12rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.titleContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 55rem;
+  height: 26rem;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 255, 0, 0.361) 40%,
+    rgba(255, 255, 0, 0.306) 50%,
+    rgba(255, 255, 0, 0) 73%
+  );
+}
+
+.wrapper {
+  display: grid;
+  text-transform: uppercase;
+  place-items: center;
+  grid-template-areas: "overlap";
+
+  > div {
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: #363833;
+    font-weight: 900;
+    font-size: 15rem;
+    grid-area: overlap;
+    -webkit-text-stroke: 9px transparent;
+    letter-spacing: 3px;
+  }
+
+  .bg {
+    transform: scaleY(1);
+    filter: drop-shadow(12px 9px 4px black);
+    transform-origin: top;
+    font-family: var(--font);
+    z-index: 1;
+  }
+
+  .fg {
+    background-image: linear-gradient(
+      180deg,
+      #ffe598 0%,
+      #ffe085 23%,
+      #ff9d73 100%
+    );
+    color: #1e2127;
+    font-family: var(--font);
+    transform: scale(1);
+    z-index: 2;
+  }
+
+  .grad {
+    all: unset;
+    background-image: linear-gradient(
+      180deg,
+      #fed042 0%,
+      #f96e18 60%,
+      #f12611 100%
+    );
+    transform: scale(1);
+    font-family: var(--font);
+    z-index: 3;
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+
+    font-weight: 900;
+    grid-area: overlap;
+    font-size: 15rem;
+    letter-spacing: 3px;
+  }
+}
+
+.topTitle {
+  position: absolute;
+  top: 0;
+
+  > div {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: #363833;
+    font-weight: 700;
+    font-size: 3.5rem;
+    grid-area: overlap;
+    letter-spacing: 5px;
+    -webkit-text-stroke: 6px transparent;
+  }
+
+  .top {
+    background-image: linear-gradient(
+      180deg,
+      #f9df90 0%,
+      #ffdf7e 27%,
+      #fa9265 100%
+    );
+    color: #000b1b;
+    font-family: var(--font);
+  }
+}
+
+.btmTitle {
+  position: absolute;
+  bottom: 0;
+
+  > div {
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: #363833;
+    font-weight: 700;
+    font-size: 4rem;
+    letter-spacing: 5px;
+    grid-area: overlap;
+    -webkit-text-stroke: 6px transparent;
+  }
+
+  .btm {
+    background-image: linear-gradient(
+      180deg,
+      #f9df90 0%,
+      #ffdf7e 27%,
+      #fa9265 100%
+    );
+    color: #000b1b;
+    font-family: var(--font);
+  }
+}
