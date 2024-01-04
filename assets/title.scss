@@ -10,6 +10,7 @@ body {
   padding-top: 12rem;
   align-items: center;
   justify-content: center;
+  height: 100vh;
 }
 
 .titleContainer {
@@ -18,6 +19,7 @@ body {
   justify-content: center;
   width: 55rem;
   height: 26rem;
+  font-size: 15rem;
   background: radial-gradient(
     ellipse at center,
     rgba(255, 255, 0, 0.361) 40%,
@@ -26,18 +28,26 @@ body {
   );
 }
 
+@media screen and (max-width: 1100px) {
+  .titleContainer {
+    width: 70vw;
+    height: 40vw;
+    font-size: 24vw;
+  }
+  }
+
 .wrapper {
   display: grid;
   text-transform: uppercase;
   place-items: center;
   grid-template-areas: "overlap";
+  font-size: 100%;
 
   > div {
     -webkit-background-clip: text;
     background-clip: text;
     color: #363833;
     font-weight: 900;
-    font-size: 15rem;
     grid-area: overlap;
     -webkit-text-stroke: 9px transparent;
     letter-spacing: 3px;
@@ -82,21 +92,21 @@ body {
 
     font-weight: 900;
     grid-area: overlap;
-    font-size: 15rem;
+    font-size: 100%;
     letter-spacing: 3px;
   }
 }
-
+// top title
 .topTitle {
   position: absolute;
   top: 0;
+  font-size: 23.3333%;
 
   > div {
     background-clip: text;
     -webkit-background-clip: text;
     color: #363833;
     font-weight: 700;
-    font-size: 3.5rem;
     grid-area: overlap;
     letter-spacing: 5px;
     -webkit-text-stroke: 6px transparent;
@@ -111,19 +121,20 @@ body {
     );
     color: #000b1b;
     font-family: var(--font);
+    font-weight: 100%;
   }
 }
-
+////btm title
 .btmTitle {
   position: absolute;
   bottom: 0;
+  font-size: 26.666%;
 
   > div {
     -webkit-background-clip: text;
     background-clip: text;
     color: #363833;
     font-weight: 700;
-    font-size: 4rem;
     letter-spacing: 5px;
     grid-area: overlap;
     -webkit-text-stroke: 6px transparent;
@@ -138,5 +149,41 @@ body {
     );
     color: #000b1b;
     font-family: var(--font);
+    font-size: 100%;
   }
 }
+
+@media screen and (max-width: 670px) {
+  .wrapper {
+  
+    > div {
+      font-weight: 700;
+      -webkit-text-stroke: 7px transparent;
+      letter-spacing: 3px;
+    }
+  
+    .bg {
+      filter: drop-shadow(9px 7px 3px black);
+    }
+
+    .grad {
+      font-weight: 700;
+      letter-spacing: 3px;
+    }
+  }
+  // top title
+  .topTitle {
+    > div {
+      letter-spacing: 4px;
+      -webkit-text-stroke: 4px transparent;
+    }
+  }
+  ////btm title
+  .btmTitle {  
+    > div {
+      font-weight: 600;
+      letter-spacing: 4px;
+      -webkit-text-stroke: 4px transparent;
+    }
+  }
+  }
